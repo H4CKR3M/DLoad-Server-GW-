@@ -5,7 +5,7 @@ var SERVER = {
     DAILIES: [
         {
             TYPE: "WEEKLY",
-            REWARD_URL: "dlc/dlc02_Week1.js",
+            REWARD_URL: "https://h4ckr3m.github.io/DLoad-Server-GW-/dlc/dlc02_Week1.js",
             SUCCESS_MESSAGE: "&a&lSUCCESS &a- Unique Trinket Added\n&7Kill &8The Roc&7 using only your starting weapon~",
             FAILURE_MESSAGE: "Failed &7&m Kill &8&mThe Roc &7&musing only your starting weapon! ",
 
@@ -62,7 +62,7 @@ var SERVER = {
 
         {
             TYPE: "ACHIEVEMENT",
-            REWARD_URL: "dlc/achv_thatsAllFolks.js",
+            REWARD_URL: "https://h4ckr3m.github.io/DLoad-Server-GW-/dlc/achv_thatsAllFolks.js",
             SUCCESS_MESSAGE: "That's All Folks!\n§7~Complete the R2 Demo Build of Giant Whoop",
 
             Init: function Init(e) {},
@@ -74,7 +74,7 @@ var SERVER = {
         },
         {
             TYPE: "ACHIEVEMENT",
-            REWARD_URL: "dlc/achv_flawlessExecution.js",
+            REWARD_URL: "https://h4ckr3m.github.io/DLoad-Server-GW-/dlc/achv_flawlessExecution.js",
             SUCCESS_MESSAGE: "Flawless Execution\n§7~Complete the map without dying!",
 
             isValidRun: true,
@@ -102,6 +102,6 @@ var SERVER = {
         },
     ],
     INIT: function INIT(){
-        DLoad.DownloadContent("dlc/dlc01_First100.zip");
+        DLoad.DownloadContent("https://h4ckr3m.github.io/DLoad-Server-GW-/dlc/dlc01_First100.zip");
     }
 }
