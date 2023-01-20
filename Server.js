@@ -6,25 +6,17 @@ var SERVER = {
         {
             TYPE: "WEEKLY",
             REWARD_URL: "https://h4ckr3m.github.io/DLoad-Server-GW-/dlc/dlc02_Week1.js",
-            SUCCESS_MESSAGE: "&a&lSUCCESS &a- Unique Trinket Added\n&7Kill &8The Roc&7 using only your starting weapon~",
-            FAILURE_MESSAGE: "Failed &7&m Kill &8&mThe Roc &7&musing only your starting weapon! ",
-
-            loginMessage: "&cKill &e&oThe Roc &cusing only your starting weapon!",
+            MESSAGE_LOGIN: "&cKill &e&oThe Roc &cusing only your starting weapon!",
+            MESSAGE_SUCCESS: "&a&lSUCCESS &a- Unique Trinket Added\n&7Kill &8The Roc&7 using only your starting weapon~",
+            MESSAGE_FAILURE: "Failed &7&m Kill &8&mThe Roc &7&musing only your starting weapon! ",
 
             isValidRun: true,
             saidLoginMessage: false,
 
-            Init: function Init(e) {
-                this.isValidRun = true;
-                this.saidLoginMessage = false;
-            },
+            Init: function Init(e) {},
             Tick: function Tick(e) {
                 if (e.player.getGamemode() == 1 && this.isValidRun){
                     this.isValidRun = false;
-                }
-                if (!this.saidLoginMessage){
-                    DLoad.MsgWeekly(this.loginMessage);
-                    this.saidLoginMessage = true;
                 }
             },
             Kill: function Kill(e) {
