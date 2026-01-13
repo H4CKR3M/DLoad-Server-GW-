@@ -6,9 +6,9 @@ var SERVER = {
         {
             TYPE: "WEEKLY",
             REWARD_URL: "https://h4ckr3m.github.io/DLoad-Server-GW-/dlc/dlc03_Week2.js",
-            MESSAGE_LOGIN: "&cDeal &e[&6&l30&e] &cor more damage in a single attack with an unleveled weapon!",
-            MESSAGE_SUCCESS: "&a&lSUCCESS &a- Unique Trinket Added\n" + "&7Deal &8[&7&l30&8] &7or more damage in a single attack with an unleveled weapon!",
-            MESSAGE_FAILURE: "FAILED! " + "&7Deal &8[&7&l30&8] &7or more damage in a single attack with an unleveled weapon!",
+            MESSAGE_LOGIN: "&cDeal &e[&6&l70&e] &cor more damage in a single attack with an unleveled weapon!",
+            MESSAGE_SUCCESS: "&a&lSUCCESS &a- Unique Trinket Added\n" + "&7Deal &8[&7&l70&8] &7or more damage in a single attack with an unleveled weapon!",
+            MESSAGE_FAILURE: "FAILED! " + "&7Deal &8[&7&l70&8] &7or more damage in a single attack with an unleveled weapon!",
 
             isValidRun: true,
             saidLoginMessage: false,
