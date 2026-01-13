@@ -10,7 +10,7 @@ var DLC = {
     TRINKET_SCRIPTS_OFFHAND: [
         {
             tag: "ULTRACHEST",
-            rewardStr: "§e[§6§lDLC§e] §a[§2§lULTRA§a] §2Dagger@0variedcommodities:emerald_dagger_reversed@1§6§l§o* Legendary@1§7@1§aA dagger with an errie@1§aradiating glow, said to@1§ahave been lost long ago.@1§9@1§7When in main hand:@1§9  No Attack Cooldown@1§9  20 Attack Damage@1§9  Sneaking = [§ex§l2§9] DMG@1§9  +20 XP on Kill@1§c  Consumes 1 XP/sec@1§9@1§9Unbreakable@2DAILY@2MAINHAND@2INGREDIENT@2SCRIPTED@2ULTRADAGGER@2ULTRAINGREDIENT@2DLC@2LEGENDARY@3100.0$mainhand$generic.attackSpeed$-7339881495005740422L$-7246337421202354335L@320.0$mainhand$generic.attackDamage$5611130981972593098L$-4744572898023570227L@57@71@C34$1",
+            rewardStr: "§e[§6§lDLC§e] §a[§2§lULTRA§a] §2Dagger@0variedcommodities:emerald_dagger_reversed@1§6§l§o* Legendary@1§7@1§aA dagger with an errie@1§aradiating glow, said to@1§ahave been lost long ago.@1§9@1§7When in main hand:@1§9  No Attack Cooldown@1§9  20 Attack Damage@1§9  Sneaking = [§ex§l2§9] DMG@1§9  +100 XP on Kill@1§c  Consumes 1 XP/sec@1§9@1§9Unbreakable@2DAILY@2MAINHAND@2INGREDIENT@2SCRIPTED@2ULTRADAGGER@2ULTRAINGREDIENT@2DLC@2LEGENDARY@3100.0$mainhand$generic.attackSpeed$-7339881495005740422L$-7246337421202354335L@320.0$mainhand$generic.attackDamage$5611130981972593098L$-4744572898023570227L@57@71@C34$1",
             Interact: function Interact(e) {
                 var offhand = e.player.getOffhandItem();
                 if (offhand != null && offhand.getName() != "minecraft:air") {
@@ -51,12 +51,11 @@ var DLC = {
             tag: "ULTRADAGGER",
             DamagedEntity: function DamagedEntity(e) {
                 if (e.player.getExpLevel() > 0 && e.player.isSneaking()){
-                    e.damage != 2;
+                    e.damage *= 2;
                 }
             },
             Kill: function Kill(e) {
-                var lvl = e.player.getExpLevel();
-                e.player.setExpLevel(lvl + 20);
+                e.API.executeCommand(e.player.world, "/xp 100 " + e.player.getDisplayName());
             },
         },
     ]
