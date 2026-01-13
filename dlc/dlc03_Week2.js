@@ -37,7 +37,8 @@ var DLC = {
                         var indexStart = name.indexOf("Chest") + 11;
                         var indexEnd = name.indexOf("§a/§21000");
                         var count = Number(name.substring(indexStart, indexEnd));
-                        count += 3;
+                        var increaseBy = e.entity == null || e.entity.getType() != 2 ? 10 : e.entity.getMaxHealth();
+                        count += increaseBy;
                         count = Math.min(count, 1000);
                         offhand.setCustomName("§e[§6§lDLC§e] §a[§2§lULTRA§a] §2Chest §a[§2" + count + "§a/§21000§a]");
                     }
