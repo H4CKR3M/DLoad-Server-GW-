@@ -37,7 +37,7 @@ var DLC = {
                         var indexStart = name.indexOf("Chest") + 11;
                         var indexEnd = name.indexOf("§a/§21000");
                         var count = Number(name.substring(indexStart, indexEnd));
-                        count += 700;
+                        count += 3;
                         count = Math.min(count, 1000);
                         offhand.setCustomName("§e[§6§lDLC§e] §a[§2§lULTRA§a] §2Chest §a[§2" + count + "§a/§21000§a]");
                     }
